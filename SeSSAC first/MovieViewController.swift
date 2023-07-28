@@ -46,9 +46,9 @@ class MovieViewController: UIViewController {
     func showRandomMovie() {
         //        var randomImg = Int.random(in: 1...5)
         //        firstImageView.image = UIImage(named: "\(randomImg)")
-                let random = [1, 2, 3, 4, 5]
+                let random = [0, 1, 2, 3]
                 let randomResult = random.randomElement()!
-                firstImageView.image = UIImage(named: "\(randomResult)")
+                firstImageView.image = UIImage(named: "\(MainMovieImgArr[randomResult])")
         secondImgChange()
         thirdImgChange()
         mainImgchange()
