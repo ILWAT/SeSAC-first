@@ -39,6 +39,7 @@ class TopButton: UIButton {
     
     private func setUI(){
         setTitleColor(.white, for: .normal)
+        
     }
     
 }

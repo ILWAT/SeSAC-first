@@ -39,5 +39,6 @@ class CustomImageView: UIImageView {
         layer.borderColor = UIColor.white.cgColor
         layer.borderWidth = 2
         contentMode = .scaleAspectFill
+        clipsToBounds = true
     }
 }

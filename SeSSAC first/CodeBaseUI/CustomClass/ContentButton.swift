@@ -20,6 +20,7 @@ class ContentButton: UIButton {
     private func setUI(){
         var config = UIButton.Configuration.filled()
         config.baseForegroundColor = .white
+        config.baseBackgroundColor = .clear
         config.imagePlacement = .top
         configuration = config
     }
