@@ -20,6 +20,12 @@
 		DE3AF3042A676EA80010A396 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3AF3032A676EA80010A396 /* MovieViewController.swift */; };
 		DE3AF3062A67702D0010A396 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3AF3052A67702D0010A396 /* LoginViewController.swift */; };
 		DE3AF30A2A67A98F0010A396 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3AF3092A67A98F0010A396 /* BoardViewController.swift */; };
+		DE45D57F2A978E6800F44BD1 /* MovieMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D57E2A978E6800F44BD1 /* MovieMainViewController.swift */; };
+		DE45D5822A978F8700F44BD1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DE45D5812A978F8700F44BD1 /* SnapKit */; };
+		DE45D5842A97930D00F44BD1 /* TopButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D5832A97930D00F44BD1 /* TopButtons.swift */; };
+		DE45D58E2A98B6DD00F44BD1 /* ContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D58D2A98B6DD00F44BD1 /* ContentButton.swift */; };
+		DE45D5902A9A456900F44BD1 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D58F2A9A456900F44BD1 /* CustomStackView.swift */; };
+		DE45D5922A9A465800F44BD1 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D5912A9A465800F44BD1 /* CustomImageView.swift */; };
 		DEE27CD92A68C45D00FF163F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE27CD82A68C45D00FF163F /* KeyboardViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +45,11 @@
 		DE3AF3032A676EA80010A396 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		DE3AF3052A67702D0010A396 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE3AF3092A67A98F0010A396 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		DE45D57E2A978E6800F44BD1 /* MovieMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMainViewController.swift; sourceTree = "<group>"; };
+		DE45D5832A97930D00F44BD1 /* TopButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopButtons.swift; sourceTree = "<group>"; };
+		DE45D58D2A98B6DD00F44BD1 /* ContentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButton.swift; sourceTree = "<group>"; };
+		DE45D58F2A9A456900F44BD1 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
+		DE45D5912A9A465800F44BD1 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		DEE27CD82A68C45D00FF163F /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE45D5822A978F8700F44BD1 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +93,7 @@
 		DE3AF2CC2A661AB00010A396 /* SeSSAC first */ = {
 			isa = PBXGroup;
 			children = (
+				DE45D57D2A978E1A00F44BD1 /* CodeBaseUI */,
 				DE09361D2A73B44700FDF0D1 /* Data */,
 				DE3AF2CD2A661AB00010A396 /* AppDelegate.swift */,
 				DE3AF2CF2A661AB00010A396 /* SceneDelegate.swift */,
@@ -99,6 +112,26 @@
 			path = "SeSSAC first";
 			sourceTree = "<group>";
 		};
+		DE45D57D2A978E1A00F44BD1 /* CodeBaseUI */ = {
+			isa = PBXGroup;
+			children = (
+				DE45D5852A97931200F44BD1 /* CustomClass */,
+				DE45D57E2A978E6800F44BD1 /* MovieMainViewController.swift */,
+			);
+			path = CodeBaseUI;
+			sourceTree = "<group>";
+		};
+		DE45D5852A97931200F44BD1 /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				DE45D58D2A98B6DD00F44BD1 /* ContentButton.swift */,
+				DE45D5832A97930D00F44BD1 /* TopButtons.swift */,
+				DE45D58F2A9A456900F44BD1 /* CustomStackView.swift */,
+				DE45D5912A9A465800F44BD1 /* CustomImageView.swift */,
+			);
+			path = CustomClass;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,6 +148,9 @@
 			dependencies = (
 			);
 			name = "SeSSAC first";
+			packageProductDependencies = (
+				DE45D5812A978F8700F44BD1 /* SnapKit */,
+			);
 			productName = "SeSSAC first";
 			productReference = DE3AF2CA2A661AB00010A396 /* SeSSAC first.app */;
 			productType = "com.apple.product-type.application";
@@ -143,6 +179,9 @@
 				Base,
 			);
 			mainGroup = DE3AF2C12A661AB00010A396;
+			packageReferences = (
+				DE45D5802A978F8700F44BD1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = DE3AF2CB2A661AB00010A396 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -170,11 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE45D5902A9A456900F44BD1 /* CustomStackView.swift in Sources */,
 				DE3AF2D22A661AB00010A396 /* ViewController.swift in Sources */,
 				DE3AF2CE2A661AB00010A396 /* AppDelegate.swift in Sources */,
+				DE45D5842A97930D00F44BD1 /* TopButtons.swift in Sources */,
 				DE0936232A73B54200FDF0D1 /* Movie.swift in Sources */,
 				DE3AF2D02A661AB00010A396 /* SceneDelegate.swift in Sources */,
+				DE45D58E2A98B6DD00F44BD1 /* ContentButton.swift in Sources */,
+				DE45D57F2A978E6800F44BD1 /* MovieMainViewController.swift in Sources */,
 				DE3AF3062A67702D0010A396 /* LoginViewController.swift in Sources */,
+				DE45D5922A9A465800F44BD1 /* CustomImageView.swift in Sources */,
 				DEE27CD92A68C45D00FF163F /* KeyboardViewController.swift in Sources */,
 				DE3AF3042A676EA80010A396 /* MovieViewController.swift in Sources */,
 				DE0936272A73B6A500FDF0D1 /* MoviesOverviewTableViewCeTableViewCell.swift in Sources */,
@@ -406,6 +450,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE45D5802A978F8700F44BD1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE45D5812A978F8700F44BD1 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE45D5802A978F8700F44BD1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE3AF2C22A661AB00010A396 /* Project object */;
 }
