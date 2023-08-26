@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //과제를 위한 화면 설정
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = MovieMainViewController()
+        window?.rootViewController = SignUpViewController()
         window?.makeKeyAndVisible()
     }
 

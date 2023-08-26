@@ -26,6 +26,8 @@
 		DE45D58E2A98B6DD00F44BD1 /* ContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D58D2A98B6DD00F44BD1 /* ContentButton.swift */; };
 		DE45D5902A9A456900F44BD1 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D58F2A9A456900F44BD1 /* CustomStackView.swift */; };
 		DE45D5922A9A465800F44BD1 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D5912A9A465800F44BD1 /* CustomImageView.swift */; };
+		DE45D5942A9A5B5B00F44BD1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D5932A9A5B5A00F44BD1 /* SignUpViewController.swift */; };
+		DE45D5962A9A65B400F44BD1 /* SignupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45D5952A9A65B400F44BD1 /* SignupTextField.swift */; };
 		DEE27CD92A68C45D00FF163F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE27CD82A68C45D00FF163F /* KeyboardViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		DE45D58D2A98B6DD00F44BD1 /* ContentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButton.swift; sourceTree = "<group>"; };
 		DE45D58F2A9A456900F44BD1 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		DE45D5912A9A465800F44BD1 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		DE45D5932A9A5B5A00F44BD1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		DE45D5952A9A65B400F44BD1 /* SignupTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTextField.swift; sourceTree = "<group>"; };
 		DEE27CD82A68C45D00FF163F /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +121,7 @@
 			children = (
 				DE45D5852A97931200F44BD1 /* CustomClass */,
 				DE45D57E2A978E6800F44BD1 /* MovieMainViewController.swift */,
+				DE45D5932A9A5B5A00F44BD1 /* SignUpViewController.swift */,
 			);
 			path = CodeBaseUI;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				DE45D5832A97930D00F44BD1 /* TopButtons.swift */,
 				DE45D58F2A9A456900F44BD1 /* CustomStackView.swift */,
 				DE45D5912A9A465800F44BD1 /* CustomImageView.swift */,
+				DE45D5952A9A65B400F44BD1 /* SignupTextField.swift */,
 			);
 			path = CustomClass;
 			sourceTree = "<group>";
@@ -214,11 +220,13 @@
 				DE3AF2CE2A661AB00010A396 /* AppDelegate.swift in Sources */,
 				DE45D5842A97930D00F44BD1 /* TopButtons.swift in Sources */,
 				DE0936232A73B54200FDF0D1 /* Movie.swift in Sources */,
+				DE45D5942A9A5B5B00F44BD1 /* SignUpViewController.swift in Sources */,
 				DE3AF2D02A661AB00010A396 /* SceneDelegate.swift in Sources */,
 				DE45D58E2A98B6DD00F44BD1 /* ContentButton.swift in Sources */,
 				DE45D57F2A978E6800F44BD1 /* MovieMainViewController.swift in Sources */,
 				DE3AF3062A67702D0010A396 /* LoginViewController.swift in Sources */,
 				DE45D5922A9A465800F44BD1 /* CustomImageView.swift in Sources */,
+				DE45D5962A9A65B400F44BD1 /* SignupTextField.swift in Sources */,
 				DEE27CD92A68C45D00FF163F /* KeyboardViewController.swift in Sources */,
 				DE3AF3042A676EA80010A396 /* MovieViewController.swift in Sources */,
 				DE0936272A73B6A500FDF0D1 /* MoviesOverviewTableViewCeTableViewCell.swift in Sources */,
