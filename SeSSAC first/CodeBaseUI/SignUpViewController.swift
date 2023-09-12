@@ -82,10 +82,25 @@ class SignUpViewController: UIViewController {
         return content
     }()
     
+    let viewModel = SignUpViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUI()
+        
+        nicknameTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
+        emailTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
+        nicknameTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
+        
+        viewModel.isVlid.bind { bool in
+            self.signupButton.isEnabled = bool
+            if bool{
+                self.signupButton.backgroundColor = .white
+            } else {
+                self.signupButton.backgroundColor = .systemGray
+            }
+        }
     }
     
     func setUI(){
@@ -127,6 +142,24 @@ class SignUpViewController: UIViewController {
             make.centerY.equalTo(contentSwitch)
             make.leading.equalTo(signupStackView)
         }
+    }
+    
+    //MARK: - Action
+    @objc func textFieldEditingChanged(_ sender: UITextField){
+        switch sender{
+        case nicknameTextField:
+            guard let text = nicknameTextField.text else {return}
+            viewModel.nickname.value = text
+        case passwordTextField:
+            guard let text = passwordTextField.text else {return}
+            viewModel.pw.value = text
+        case emailTextField:
+            guard let text = emailTextField.text else {return}
+            viewModel.id.value = text
+        default:
+            break
+        }
+        viewModel.checkValidId()
     }
 
 }
