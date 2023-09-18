@@ -36,6 +36,7 @@ class SignUpViewController: UIViewController {
     let passwordTextField = {
         let view = SignupTextField()
         view.placeholder = "비밀번호"
+        view.isSecureTextEntry = true
         return view
     }()
     
@@ -82,39 +83,36 @@ class SignUpViewController: UIViewController {
         return content
     }()
     
+    let stateLabel = {
+        let label = UILabel()
+        label.text = "텍스트를 입력해주세요."
+        label.textColor = .white
+        label.numberOfLines = 0
+        return label
+    }()
+    
     let viewModel = SignUpViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        bindViewModel()
         
-        nicknameTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
-        emailTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
-        nicknameTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
-        
-        viewModel.isVlid.bind { bool in
-            self.signupButton.isEnabled = bool
-            if bool{
-                self.signupButton.backgroundColor = .white
-            } else {
-                self.signupButton.backgroundColor = .systemGray
-            }
+        [nicknameTextField, emailTextField, passwordTextField, recoCodeTextField].forEach { textField in
+            textField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
         }
+        
     }
     
     func setUI(){
-        signupStackView.addArrangedSubview(emailTextField)
-        signupStackView.addArrangedSubview(passwordTextField)
-        signupStackView.addArrangedSubview(nicknameTextField)
-        signupStackView.addArrangedSubview(locationTextField)
-        signupStackView.addArrangedSubview(recoCodeTextField)
-        signupStackView.addArrangedSubview(signupButton)
+        [emailTextField, passwordTextField, nicknameTextField, locationTextField, recoCodeTextField, signupButton].forEach { button in
+            signupStackView.addArrangedSubview(button)
+        }
+
         
-        view.addSubview(signupStackView)
-        view.addSubview(TitleLabel)
-        view.addSubview(contentSwitch)
-        view.addSubview(moreInfoLabel)
+        [signupStackView, TitleLabel, contentSwitch, moreInfoLabel, stateLabel].forEach { content in
+            view.addSubview(content)
+        }
         
         setConstratints()
     }
@@ -142,6 +140,12 @@ class SignUpViewController: UIViewController {
             make.centerY.equalTo(contentSwitch)
             make.leading.equalTo(signupStackView)
         }
+        
+        stateLabel.snp.makeConstraints { make in
+            make.top.equalTo(moreInfoLabel.snp.bottom).offset(10)
+            make.bottom.trailing.lessThanOrEqualTo(view.safeAreaLayoutGuide).inset(10)
+            make.leading.equalTo(moreInfoLabel)
+        }
     }
     
     //MARK: - Action
@@ -156,10 +160,30 @@ class SignUpViewController: UIViewController {
         case emailTextField:
             guard let text = emailTextField.text else {return}
             viewModel.id.value = text
+        case recoCodeTextField:
+            guard let text = recoCodeTextField.text else {return}
+            viewModel.recommandCode.value = text
         default:
             break
         }
         viewModel.checkValidId()
+    }
+    
+    //MARK: - Helper
+    
+    private func bindViewModel(){
+        viewModel.isValid.bind { bool in
+            self.signupButton.isEnabled = bool
+            if bool{
+                self.signupButton.backgroundColor = .white
+            } else {
+                self.signupButton.backgroundColor = .systemGray
+            }
+        }
+        
+        viewModel.showState.bind { string in
+            self.stateLabel.text = string
+        }
     }
 
 }
